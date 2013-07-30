@@ -54,3 +54,8 @@ $ncurses->inputChar();
 ```php
 unset($ncurses);
 ```
+
+Todo
+============
+1. Add examples
+2. Add yii behavior for ConsoleCommand with snippets and helpers (eg. requestSelected)
