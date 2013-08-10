@@ -7,10 +7,10 @@ Basics
 1. There's 3 objects:
 	1. Ncurses - the main object that provides general functionality of ncurses.
 	2. Window - an object that provides functionality of ncurses windows.
-	3. Panel - an object that provides functionality of windows panels. You have not to make these objects manual.
+	3. Panel - an object that provides functionality of windows panels. You have not to make these objects manually.
 2. How it works: Init ncurses -> make windows -> fill windows -> refresh() -> update windows -> refresh() -> ...
 3. Read comments and see examples
-4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ (http://habrahabr.ru/post/186570/ on the russian).
+4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ (http://habrahabr.ru/post/186570/ on russian).
 5. Ncurses tutorial: http://invisible-island.net/ncurses/ncurses-intro.html, docs: http://pubs.opengroup.org/onlinepubs/007908799/xcurses/curses.h.html
 
 How to use
@@ -53,6 +53,19 @@ $ncurses->inputChar();
 5. Close ncurses session and clear the screen (you need do it manually if your script should show any data in normal mode)
 ```php
 unset($ncurses);
+```
+
+How to install ncurses binding
+============
+1. Install pecl. It is in a package named `php5-dev` in Ubuntu (`php-pear` in ArchLinux)
+2. Install the ncurses binding.
+```
+sudo pecl install ncurses
+```
+
+3. Include the php extension. Add follows in your php.ini:
+```
+extension=ncurses.so
 ```
 
 Todo
