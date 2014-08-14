@@ -1,0 +1,19 @@
+{
+    "name": "wapmorgan/ncursesobjects",
+    "description": "This library implements ncurses functionality in OOP way.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "wapmorgan",
+            "email": "wapmorgan@gmail.com"
+        }
+    ],
+    "require": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "wapmorgan\\NcursesObjects": "src"
+        }
+    }
+}

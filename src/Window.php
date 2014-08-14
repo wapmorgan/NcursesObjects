@@ -1,4 +1,5 @@
 <?php
+namespace wapmorgan\NcursesObjects;
 
 /**
  * A window object that implements functionality for ncurses window resource
@@ -34,7 +35,7 @@ class Window {
 	/**
 	 * Create a window
 	 *
-	 * @param int $colums
+	 * @param int $columns
 	 * @param int $rows
 	 * @param int $x
 	 * @param int $y

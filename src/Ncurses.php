@@ -1,4 +1,5 @@
 <?php
+namespace wapmorgan\NcursesObjects;
 
 /**
  * A ncurses object that implements functionality for main ncurses functions
@@ -19,8 +20,8 @@ class Ncurses {
 	 */
 	public function __construct() {
 		$dir = dirname(__FILE__);
-		require_once($dir.'/Window.php');
-		require_once($dir.'/Panel.php');
+		require_once($dir . '/Window.php');
+		require_once($dir . '/Panel.php');
 		ncurses_init();
 	}
 

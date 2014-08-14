@@ -1,4 +1,5 @@
 <?php
+namespace wapmorgan\NcursesObjects;
 
 /**
  * A panel object that implements functionality for ncurses panel resource
