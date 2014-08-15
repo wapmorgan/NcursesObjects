@@ -15,13 +15,15 @@ class Ncurses {
 	const CURSOR_NORMAL = 1;
 	const CURSOR_VISIBLE = 2;
 
+    /**
+     * @var Terminal
+     */
+    private $terminal;
+
 	/**
 	 * Inits ncurses
 	 */
 	public function __construct() {
-		$dir = dirname(__FILE__);
-		require_once($dir . '/Window.php');
-		require_once($dir . '/Panel.php');
 		ncurses_init();
 	}
 
@@ -31,6 +33,15 @@ class Ncurses {
 	public function __destruct() {
 		ncurses_end();
 	}
+
+    /**
+     * @return Terminal
+     */
+    public function getTerminal() {
+        if (is_null($this->terminal))
+            $this->terminal = new Terminal;
+        return $this->terminal;
+    }
 
 	/**
 	 * Sets echo state
@@ -101,7 +112,7 @@ class Ncurses {
 	/**
 	 * Reads a char from keyboard
 	 * @return int Ascii-code of char
-	 * @see http://www.php.net/manual/en/ncurses.keyconsts.php for keys
+	 * @see Keys for keys
 	 */
 	public function inputChar() {
 		return ncurses_getch();

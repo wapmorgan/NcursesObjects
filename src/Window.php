@@ -32,6 +32,11 @@ class Window {
 	private $x;
 	private $y;
 
+    /**
+     * @var WindowStyle
+     */
+    protected $style;
+
 	/**
 	 * Create a window
 	 *
@@ -69,8 +74,8 @@ class Window {
 
 	/**
 	 * Gets window size
-	 * @param any $columns Will be filled with window columns
-	 * @param any $rows Will be filled with window rows
+	 * @param int $columns Will be filled with window columns
+	 * @param int $rows Will be filled with window rows
 	 * @return array An array with elements 'columns' and 'rows'
 	 */
 	public function getSize(&$columns = null, &$rows = null) {
