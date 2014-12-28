@@ -39,5 +39,17 @@ class Terminal {
         return ncurses_has_il();
     }
 
+    public function allAtributes() {
+        return ncurses_termattrs();
+    }
+
+    public function termName() {
+        return ncurses_termname();
+    }
+
+    public function longName() {
+        return ncurses_longname();
+    }
+
 
 }

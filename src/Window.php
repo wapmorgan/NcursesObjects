@@ -65,7 +65,7 @@ class Window {
 	}
 
 	/**
-	 * Returns a ncurses window resoruce
+	 * Returns a ncurses window resource
 	 * @return resource
 	 */
 	public function getWindow() {

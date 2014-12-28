@@ -1,6 +1,13 @@
 <?php
 namespace wapmorgan\NcursesObjects;
 
+function ncurses_init() {
+    if (function_exists('\ncurses_init')) {
+        return \ncurses_init();
+    }
+    throw new \RuntimeException("Library <ncurses> in not loaded.");
+}
+
 /**
  * A ncurses object that implements functionality for main ncurses functions
  * @author wapmorgan (wapmorgan@gmail.com)
@@ -114,9 +121,17 @@ class Ncurses {
 	 * @return int Ascii-code of char
 	 * @see Keys for keys
 	 */
-	public function inputChar() {
+	public function getCh() {
 		return ncurses_getch();
 	}
+
+    /**
+     * @param $ch
+     * @return int
+     */
+    public function unGetCh($ch) {
+        return ncurses_ungetch($ch);
+    }
 
 	/**
 	 * Refreshes the virtual screen to reflect the relations between panels in the stack
@@ -128,4 +143,23 @@ class Ncurses {
 		ncurses_doupdate();
 		return $this;
 	}
+
+    /**
+     * @param $char
+     * @return $this
+     */
+    public function insertChar($char) {
+        ncurses_insch($char);
+        return $this;
+    }
+
+    /**
+     * @param $count
+     * @return $this
+     */
+    public function insertDeleteLines($count) {
+        ncurses_insdelln($count);
+        return $this;
+    }
+
 }
