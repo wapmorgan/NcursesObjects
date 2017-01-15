@@ -2,15 +2,21 @@ Ncurses Objects
 ==================
 This is a php library that provides ncurses functionality in OOP interface.
 
+[![Composer package](http://xn--e1adiijbgl.xn--p1acf/badge/wapmorgan/ncursesobjects)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+[![Latest Stable Version](https://poser.pugx.org/wapmorgan/ncursesobjects/v/stable)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+[![Total Downloads](https://poser.pugx.org/wapmorgan/ncursesobjects/downloads)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+[![License](https://poser.pugx.org/wapmorgan/ncursesobjects/license)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+[![Latest Unstable Version](https://poser.pugx.org/wapmorgan/ncursesobjects/v/unstable)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+
 Basics
 ==================
-1. There's 4 main objects:
+1. There's 4 main classes:
 	1. **Ncurses** - main object to act with Ncurses.
 	2. **Window** - an object that represents a ncurses windows.
 	3. **Panel** - an object that represents a window panels.
 	4. **Terminal** - an object to act with Terminal
 	
-   And 4 additional objects:
+   And 4 additional classes:
    
    	1. **Colors** - all colors available in Ncurses
 	2. **Keys** - all keys
@@ -18,12 +24,18 @@ Basics
 	4. **WindowStyle** - a helper to create style of windows
 2. How it works:
    1. ncurses initiation
-   2. windows making & filling
+   2. windows making & filling with text
    3. refresh() calling
    4. go to step **2**
 3. Read comments and see examples
-4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ (http://habrahabr.ru/post/186570/ on russian).
+4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ ([on russian](http://habrahabr.ru/post/186570/)).
 5. Ncurses tutorial: http://invisible-island.net/ncurses/ncurses-intro.html, docs: http://pubs.opengroup.org/onlinepubs/007908799/xcurses/curses.h.html
+
+# Installation
+Install it via Composer:
+```
+composer require wapmorgan/ncursesobjects dev-master
+```
 
 Simple application example
 ==================
@@ -58,7 +70,10 @@ Simple application example
 
 4. Wait for input to see windows
     ```php
-    $ncurses->inputChar();
+    while (true) {
+    	$ncurses->inputChar();
+	sleep(1);
+    }
     ```
 
 5. Close ncurses session and clear the screen (you need do it manually if your script should show any data in normal mode)
