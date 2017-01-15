@@ -8,8 +8,13 @@ This is a php library that provides ncurses functionality in OOP interface.
 [![License](https://poser.pugx.org/wapmorgan/ncursesobjects/license)](https://packagist.org/packages/wapmorgan/ncursesobjects)
 [![Latest Unstable Version](https://poser.pugx.org/wapmorgan/ncursesobjects/v/unstable)](https://packagist.org/packages/wapmorgan/ncursesobjects)
 
-Basics
-==================
+1. Basics
+2. Installation
+3. Simple application example
+4. Installation of ncurses binding
+
+# Basics
+
 ![Structure](Structure.png)
 
 1. There's 4 main classes:
@@ -39,8 +44,8 @@ Install it via Composer:
 composer require wapmorgan/ncursesobjects dev-master
 ```
 
-Simple application example
-==================
+# Simple application example
+
 1. Create the main object and setup it
     ```php
     $ncurses = new Ncurses;
@@ -83,8 +88,8 @@ Simple application example
     unset($ncurses);
     ```
 
-How to install ncurses binding
-============
+# Installation of ncurses binding
+
 1. Install pecl. It is in a package named `php5-dev` in Ubuntu (`php-pear` in ArchLinux)
 2. Install the ncurses binding.
     ```
