@@ -4,10 +4,18 @@ This is a php library that provides ncurses functionality in OOP interface.
 
 Basics
 ==================
-1. There's 3 objects:
-	1. Ncurses - the main object that provides general functionality of ncurses.
-	2. Window - an object that provides functionality of ncurses windows.
-	3. Panel - an object that provides functionality of windows panels. You have not to make these objects manually.
+1. There's 4 main objects:
+	1. **Ncurses** - main object to act with Ncurses.
+	2. **Window** - an object that represents a ncurses windows.
+	3. **Panel** - an object that represents a window panels.
+	4. **Terminal** - an object to act with Terminal
+	
+   And 4 additional objects:
+   
+   	1. **Colors** - all colors available in Ncurses
+	2. **Keys** - all keys
+	3. **MouseEvents** - all events from Mouse
+	4. **WindowStyle** - a helper to create style of windows
 2. How it works:
    1. ncurses initiation
    2. windows making & filling
@@ -17,9 +25,8 @@ Basics
 4. Ncurses in PHP tutorial: http://devzone.zend.com/173/using-ncurses-in-php/ (http://habrahabr.ru/post/186570/ on russian).
 5. Ncurses tutorial: http://invisible-island.net/ncurses/ncurses-intro.html, docs: http://pubs.opengroup.org/onlinepubs/007908799/xcurses/curses.h.html
 
-How to use
+Simple application example
 ==================
-0. Include all files
 1. Create the main object and setup it
     ```php
     $ncurses = new Ncurses;
@@ -71,7 +78,3 @@ How to install ncurses binding
     ```
     extension=ncurses.so
     ```
-
-Todo
-============
-1. Add examples
