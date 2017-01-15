@@ -10,6 +10,8 @@ This is a php library that provides ncurses functionality in OOP interface.
 
 Basics
 ==================
+![Structure](Structure.png)
+
 1. There's 4 main classes:
 	1. **Ncurses** - main object to act with Ncurses.
 	2. **Window** - an object that represents a ncurses windows.
