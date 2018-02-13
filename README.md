@@ -2,7 +2,7 @@ Ncurses Objects
 ==================
 This is a php library that provides ncurses functionality in OOP interface.
 
-[![Composer package](http://xn--e1adiijbgl.xn--p1acf/badge/wapmorgan/ncursesobjects)](https://packagist.org/packages/wapmorgan/ncursesobjects)
+[![Composer package](http://composer.network/badge/wapmorgan/ncursesobjects)](https://packagist.org/packages/wapmorgan/ncursesobjects)
 [![Latest Stable Version](https://poser.pugx.org/wapmorgan/ncursesobjects/v/stable)](https://packagist.org/packages/wapmorgan/ncursesobjects)
 [![Total Downloads](https://poser.pugx.org/wapmorgan/ncursesobjects/downloads)](https://packagist.org/packages/wapmorgan/ncursesobjects)
 [![License](https://poser.pugx.org/wapmorgan/ncursesobjects/license)](https://packagist.org/packages/wapmorgan/ncursesobjects)
